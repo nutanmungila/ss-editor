@@ -2,23 +2,23 @@
   "name": "react-babel-webpack-boilerplate",
   "version": "1.0.0",
   "description": "",
-  "main": "app/main.jsx",
+  "main": "src/main.jsx",
   "scripts": {
-    "lint": "eslint 'app/**/*.@(js|jsx)'",
+    "lint": "eslint 'src/**/*.@(js|jsx)'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "webpack-dev-server --devtool eval --progress --hot --colors --content-base app",
+    "start": "webpack-dev-server --devtool eval --progress --hot --colors --content-base src",
     "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js",
     "validate": "npm ls"
   },
   "dependencies": {
     "babel-runtime": "~6.2.0",
     "react": "~0.14.3",
-    "react-dom": "~0.14.3"
+    "react-dom": "~0.14.3",
+    "react-redux": "^4.0.6",
+    "redux": "^3.0.5"
   },
   "devDependencies": {
-    "webpack": "~1.12.9",
-    "webpack-dev-server": "~1.14.0",
     "babel-core": "~6.2.1",
     "babel-eslint": "~4.1.6",
     "babel-loader": "~6.2.0",
@@ -33,7 +33,10 @@
     "eslint-plugin-react": "~3.10.0",
     "open-browser-webpack-plugin": "0.0.1",
     "precommit-hook": "~3.0.0",
-    "style-loader": "~0.13.0"
+    "redux-devtools": "^3.0.1",
+    "style-loader": "~0.13.0",
+    "webpack": "~1.12.9",
+    "webpack-dev-server": "~1.14.0"
   },
   "keywords": [
     "es6",
